@@ -280,7 +280,8 @@ public class JavaBank extends JFrame {
             AccountNames[noAccounts] = "USED";
             //System.out.println(myAccounts[noAccounts].getaccountName());
             //emptyAccount = i;         		
-
+// sebelum ada text area seperti poin b, diubah menjadi method yang diekstrak tadi 
+// jadi [i] -> ke no acoount == hanya ini saja 
             displayAccountDetails(myAccounts[noAccounts].getBankName(),
                     myAccounts[noAccounts].getAccountName(),
                     myAccounts[noAccounts].getAccountNum(),
@@ -334,6 +335,7 @@ public class JavaBank extends JFrame {
             int Accountnum = Integer.parseInt(AccountnumJTextField.getText());
             int Deposit = Integer.parseInt(DepositJTextField.getText());
             int Withdraw = Integer.parseInt(WithdrawJTextField.getText());
+// tetap tdak ubah hanya manggil method 
 
             for (int i = 0; i < noAccounts; i++) {
                 if ((myAccounts[i].getAccountNum() == Accountnum) && (Deposit > 0)) {
@@ -391,7 +393,7 @@ public class JavaBank extends JFrame {
         WithdrawJTextField.setText("0");
 
     }
-
+// ini membuat method print text area 
     private void displayAccountDetails(String bName, String aName,
             int aNum, int aBal) {
         displayJTextArea.setText("Bank Name : " + bName
